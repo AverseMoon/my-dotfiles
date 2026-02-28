@@ -3,39 +3,42 @@
 # ------------------------------
 # Install packages
 # ------------------------------
-yay -S --needed \
-hyprland \
-hyprpolkitagent \
-xdg-desktop-portal-hyprland \
-waybar \
-hyprpaper \
-swaync \
-hyprlock \
-xwaylandvideobridge \
-wvkbd-mobintl \
-alacritty \
-dolphin \
-firefox \
-discord \
-spotify \
-moonlight \
-zed \
-anyrun \
-playerctl \
-brightnessctl \
-wpctl \
-blueman \
-networkmanager-applet \
-kvantum \
-breeze \
-grim \
-slurp \
-xdg-desktop-portal \
-pipewire \
-pipewire-pulse \
-pipewire-jack \
-wl-clipboard \
-pavucontrol
+read -P "Install dependencies? (Y/n) " ans
+if not test $ans = "n"
+    yay -S --needed \
+    hyprland \
+    hyprpolkitagent \
+    xdg-desktop-portal-hyprland \
+    waybar \
+    hyprpaper \
+    swaync \
+    hyprlock \
+    xwaylandvideobridge \
+    wvkbd-mobintl \
+    alacritty \
+    dolphin \
+    firefox \
+    discord \
+    spotify \
+    moonlight \
+    zed \
+    anyrun \
+    playerctl \
+    brightnessctl \
+    wpctl \
+    blueman \
+    networkmanager-applet \
+    kvantum \
+    breeze \
+    grim \
+    slurp \
+    xdg-desktop-portal \
+    pipewire \
+    pipewire-pulse \
+    pipewire-jack \
+    wl-clipboard \
+    pavucontrol
+end
 
 # ------------------------------
 # Create config directories
@@ -97,3 +100,5 @@ if test -e $HOME/.config/alacritty/alacritty.toml.bak
 end
 [ -e $HOME/.config/alacritty/alacritty.toml ] && mv $HOME/.config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml.bak
 cp ./alacritty.toml $HOME/.config/alacritty/alacritty.toml
+
+hyprctl reload
