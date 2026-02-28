@@ -34,7 +34,8 @@ xdg-desktop-portal \
 pipewire \
 pipewire-pulse \
 pipewire-jack \
-wl-clipboard
+wl-clipboard \
+pavucontrol
 
 # ------------------------------
 # Create config directories

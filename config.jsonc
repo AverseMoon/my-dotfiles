@@ -79,7 +79,6 @@
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    "on-click": "echo ''",
   },
   "pulseaudio": {
     "max-volume": 150,
